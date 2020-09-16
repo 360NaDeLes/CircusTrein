@@ -1,4 +1,5 @@
 ﻿using System;
+using Logic;
 
 namespace CircusTrein
 {
@@ -6,7 +7,9 @@ namespace CircusTrein
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("This is just a test.");
+            Animal beaver = new Herbivore("Bever", 1);
+
+            Console.WriteLine("Beaver Name = {0} Size = {1}", beaver.GetName(), beaver.GetSize());
         }
     }
 }
