@@ -13,5 +13,22 @@ namespace Logic
         {
             allAnimals = new List<Animal>();
         }
+
+        public int GetSize()
+        {
+            return _size;
+        }
+
+        public string AnimalsInWagon()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            foreach (Animal animal in allAnimals)
+            {
+                sb.Append($"{animal.GetName()} ");
+            }
+
+            return sb.ToString();
+        }
     }
 }
