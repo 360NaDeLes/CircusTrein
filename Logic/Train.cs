@@ -16,14 +16,20 @@ namespace Logic
 
         public string GetAnimalsFromWagon()
         {
-            StringBuilder sb = new StringBuilder();
+            StringBuilder builder = new StringBuilder();
+
             for (var i = 0; i < allWagons.ToList().Count; i++)
             {
                 var wagon = allWagons.ToList()[i];
-                sb.AppendLine($"Wagon {i} : {wagon.AnimalsInWagon()} size remaining: {wagon.GetSize()}.");
+                builder.AppendLine($"Wagon {i} : {wagon.AnimalsInWagon()} size remaining: {wagon.GetSize()}.");
             }
 
-            return sb.ToString();
+            return builder.ToString();
+        }
+
+        public void AddAnimal(Animal animal)
+        {
+
         }
     }
 }
